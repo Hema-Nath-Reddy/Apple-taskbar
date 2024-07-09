@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif, "Segoe UI", Tahoma, Geneva, Verdana,
+    sans-serif;
+  transition: all 0.2s ease-in-out;
+  color: white;
+  font-size: 100%;
+}
+body {
+  background-color: #202124;
+  height: 100dvh;
+  overflow: hidden;
+  display: flex;
+}
+.bar {
+  background-color: #303030;
+  width: 60dvw;
+  height: 3dvw;
+  margin: auto auto 1dvw auto;
+  border-radius: max(0.5dvw, 0.5dvh);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  @mixin hover($scale, $translate) {
+    scale: $scale;
+    transform: translateY($translate);
+  }
+  .icons {
+    height: 90%;
+    aspect-ratio: 1/1;
+ 
+  }
+  .settings{
+    border-radius: 10px;
+    height: 75%;
+  }
+  .notes{
+    height: 110%
+  }
+  .mainScale {
+    @include hover(1.5, -50%);
+  }
+  .leftScale {
+    @include hover(1.1, -30%);
+  }
+  .farScale {
+    @include hover(1, -10%);
+  }
+}
